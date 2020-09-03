@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+// リクエスト
+message SampleRequest {
+    string message = 1;
+}
+
+// レスポンス
+message SampleResponse {
+    string reply = 1;
+}
+
+// サンプルのサービス
+service SampleService {
+    // 呼び出し
+    rpc Call (SampleRequest) returns (SampleResponse) {}
+}
