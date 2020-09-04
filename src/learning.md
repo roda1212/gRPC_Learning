@@ -167,6 +167,23 @@ service SampleService {
 
 各開発言語を参照
 
+## その他
+
+## 通信方式
+
+4種類ある
+* Unary
+  * 1 req, 1 res
+* Server streaming
+  * 1 req, n res
+* Client streaming
+  * n req, 1 res
+* Bidirectional streaming
+  * x req, y res
+
+説明は以下がわかりやすい
+[goでgRPCの4つの通信方式やってみた(Dockerのサンプルあり)](https://qiita.com/tomo0/items/310d8ffe82749719e029)
+
 ## protoファイルの管理
 
 実際に触ってみて、大きな課題はIDLの管理（共有方法）のように感じた。
@@ -181,3 +198,10 @@ Java-Gradleはデフォルトで自プロジェクト配下の.protoをコンパ
 個人的には方針2か3かな。。。
 いずれにしても、どうやって参照するかが悩みどころな気がする。
 リポジトリに.protoもpublishする感じ？
+
+## Link
+
+* [いまさらだけどgRPCに入門したので分かりやすくまとめてみた](https://qiita.com/gold-kou/items/a1cc2be6045723e242eb)
+  * 比較的わかりやすい
+* [gRPCのシリアライゼーション形式をJSONにする](https://qiita.com/yugui/items/238dcdb75cd40d0f1ece)
+  * できるらしいが、かなり手間はかかりそう
