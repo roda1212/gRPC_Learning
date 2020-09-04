@@ -15,11 +15,11 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='sample.proto',
-  package='',
+  package='sample',
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0csample.proto\" \n\rSampleRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x1f\n\x0eSampleResponse\x12\r\n\x05reply\x18\x01 \x01(\t2:\n\rSampleService\x12)\n\x04\x43\x61ll\x12\x0e.SampleRequest\x1a\x0f.SampleResponse\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x0csample.proto\x12\x06sample\" \n\rSampleRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x1f\n\x0eSampleResponse\x12\r\n\x05reply\x18\x01 \x01(\t2H\n\rSampleService\x12\x37\n\x04\x43\x61ll\x12\x15.sample.SampleRequest\x1a\x16.sample.SampleResponse\"\x00\x62\x06proto3'
 )
 
 
@@ -27,14 +27,14 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _SAMPLEREQUEST = _descriptor.Descriptor(
   name='SampleRequest',
-  full_name='SampleRequest',
+  full_name='sample.SampleRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='message', full_name='SampleRequest.message', index=0,
+      name='message', full_name='sample.SampleRequest.message', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -52,21 +52,21 @@ _SAMPLEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16,
-  serialized_end=48,
+  serialized_start=24,
+  serialized_end=56,
 )
 
 
 _SAMPLERESPONSE = _descriptor.Descriptor(
   name='SampleResponse',
-  full_name='SampleResponse',
+  full_name='sample.SampleResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='reply', full_name='SampleResponse.reply', index=0,
+      name='reply', full_name='sample.SampleResponse.reply', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -84,8 +84,8 @@ _SAMPLERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=50,
-  serialized_end=81,
+  serialized_start=58,
+  serialized_end=89,
 )
 
 DESCRIPTOR.message_types_by_name['SampleRequest'] = _SAMPLEREQUEST
@@ -95,14 +95,14 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 SampleRequest = _reflection.GeneratedProtocolMessageType('SampleRequest', (_message.Message,), {
   'DESCRIPTOR' : _SAMPLEREQUEST,
   '__module__' : 'sample_pb2'
-  # @@protoc_insertion_point(class_scope:SampleRequest)
+  # @@protoc_insertion_point(class_scope:sample.SampleRequest)
   })
 _sym_db.RegisterMessage(SampleRequest)
 
 SampleResponse = _reflection.GeneratedProtocolMessageType('SampleResponse', (_message.Message,), {
   'DESCRIPTOR' : _SAMPLERESPONSE,
   '__module__' : 'sample_pb2'
-  # @@protoc_insertion_point(class_scope:SampleResponse)
+  # @@protoc_insertion_point(class_scope:sample.SampleResponse)
   })
 _sym_db.RegisterMessage(SampleResponse)
 
@@ -110,17 +110,17 @@ _sym_db.RegisterMessage(SampleResponse)
 
 _SAMPLESERVICE = _descriptor.ServiceDescriptor(
   name='SampleService',
-  full_name='SampleService',
+  full_name='sample.SampleService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=83,
-  serialized_end=141,
+  serialized_start=91,
+  serialized_end=163,
   methods=[
   _descriptor.MethodDescriptor(
     name='Call',
-    full_name='SampleService.Call',
+    full_name='sample.SampleService.Call',
     index=0,
     containing_service=None,
     input_type=_SAMPLEREQUEST,

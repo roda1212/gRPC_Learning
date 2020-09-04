@@ -16,7 +16,7 @@ class SampleServiceStub(object):
             channel: A grpc.Channel.
         """
         self.Call = channel.unary_unary(
-                '/SampleService/Call',
+                '/sample.SampleService/Call',
                 request_serializer=sample__pb2.SampleRequest.SerializeToString,
                 response_deserializer=sample__pb2.SampleResponse.FromString,
                 )
@@ -43,7 +43,7 @@ def add_SampleServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'SampleService', rpc_method_handlers)
+            'sample.SampleService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -63,7 +63,7 @@ class SampleService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/SampleService/Call',
+        return grpc.experimental.unary_unary(request, target, '/sample.SampleService/Call',
             sample__pb2.SampleRequest.SerializeToString,
             sample__pb2.SampleResponse.FromString,
             options, channel_credentials,

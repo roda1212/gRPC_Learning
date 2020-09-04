@@ -166,3 +166,18 @@ service SampleService {
 ### 実際の使用
 
 各開発言語を参照
+
+## protoファイルの管理
+
+実際に触ってみて、大きな課題はIDLの管理（共有方法）のように感じた。
+
+Java-Gradleはデフォルトで自プロジェクト配下の.protoをコンパイルするようになっている。
+それだとServer-Clientでモジュールが分かれる場合にはどーすんの？
+ましてや、開発言語が変わったらどうすりゃいいのか。
+
+[Qiita - Protocol buffers の proto ファイルの管理と配布](https://qiita.com/RyotaNakaya/items/d71d2cb5f5cd44b052ee)
+のように、同じ課題意識を持っている人はいる。
+
+個人的には方針2か3かな。。。
+いずれにしても、どうやって参照するかが悩みどころな気がする。
+リポジトリに.protoもpublishする感じ？

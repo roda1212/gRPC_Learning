@@ -2,9 +2,9 @@ from grpc.tools import protoc
 protoc.main(
     (
         '',
-        '-I.',
+        '-I..',
         '--python_out=.',
         '--grpc_python_out=.',
-        'sample.proto',
+        '../sample.proto',
     )
 )

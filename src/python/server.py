@@ -8,7 +8,7 @@ class SampleService(SampleServiceServicer):
         super().__init__()
     def Call(self, request, context):
         print(f"request : {request.message}")
-        return SampleResponse(reply=f"reply for {request.message}")
+        return SampleResponse(reply=f"reply for {request.message} (python)")
 
 from concurrent import futures
 from sample_pb2_grpc import add_SampleServiceServicer_to_server
